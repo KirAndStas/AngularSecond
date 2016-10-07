@@ -1,0 +1,101 @@
+.navbar { border-radius:0; }
+
+#but_pos {
+
+}
+
+.affix {
+  top: 0;
+  right: 0;
+  bottom: 100px;
+    }
+
+.side_content {
+
+  height:100vh;
+  right: 0;
+  overflow-y: scroll;
+
+}
+
+.smart_head {
+  display: block;
+  margin: 2%;
+
+}
+
+#pos_right {
+  position: fixed;
+  right: 0;
+}
+
+#img_frame {
+  width: 128px;
+  height: 128px;
+}
+
+#align_center {
+  float: none;
+  display: block;
+  margin: auto;
+}
+
+.first_box {
+  background: linear-gradient(to bottom, #d7d7d7, #f1f1f1);
+  width: 360px;
+  height: 200px;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}
+
+.second_box {
+  background: linear-gradient(to bottom, #d7d7d7, #f1f1f1);
+  width: 420px;
+  height: 200px;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}
+
+.third_box {
+  background: linear-gradient(to bottom, #d7d7d7, #f1f1f1);
+  width: 450px;
+  height: 300px;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}
+
+.fourth_box {
+  background: linear-gradient(to bottom, #d7d7d7, #f1f1f1);
+  width: 450px;
+  height: 150px;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}
+
+.fifth_box {
+  background: linear-gradient(to bottom, #d7d7d7, #f1f1f1);
+  width: 300px;
+  height: 150px;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}

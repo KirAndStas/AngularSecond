@@ -1,0 +1,44 @@
+<h1 class="smart_head">Smart IT Solutions - testing</h1>
+<div class="container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-heading">List of boxes</div>
+      <div class="panel-body" id="sideRight_content">
+        <button class="btn btn-info btn-block" id="align_center" type="button" ui-sref="home">Back</button>
+        <div>
+          <span class="well thumbnail first_box" ng-class="{'side_content' : scrollA}">
+            <div ng-repeat="someArtic in second.displayResult.A" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span class="well thumbnail second_box" ng-class="{'side_content' : scrollB}">
+            <div ng-repeat="someArtic in second.displayResult.B" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span class="well thumbnail third_box" ng-class="{'side_content': scrollC}">
+            <div ng-repeat="someArtic in second.displayResult.C" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span class="well thumbnail fourth_box" ng-class="{'side_content': scrollD}">
+            <div ng-repeat="someArtic in second.displayResult.D" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span class="well thumbnail fifth_box" ng-class="{'side_content': scrollE}">
+            <div ng-repeat="someArtic in second.displayResult.E" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<h1 class="smart_head">Smart IT Solutions - testing</h1>
+<div class="container-fluid">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">List of articles</div>
+        <div class="panel-body">
+          <button style="margin-bottom: 10px;" class="btn btn-block btn-info" ng-click="Hide()">Collapse All</button>
+          <ul class="media-list" id="sideLeft_content" >
+            <div ng-repeat="someArtic in first.articles.All" class="in_leftSide"  ng-hide="!someArtic.hide_or_no">
+
+              <div dnd-effect-allowed="move" dnd-draggable="someArtic" dnd-moved="first.articles.All.splice($index, 1)" ng-click="someArtic.isCollapsed=!someArtic.isCollapsed; gen_list1(someArtic.id)" dnd-dragstart="indefMe($index, 'All')" dnd-dragend="shortMe()" class="btn btn-block btn-primary">
+                {{ someArtic.id + ". " + someArtic.title}}
+              </div>
+
+              <div ng-show="someArtic.isCollapsed" class="media">
+                <div class="media-left">
+                  <img class="media-object img-thumbnail" id="img_frame" ng-src="{{ someArtic.picture }}" >
+                </div>
+                <div class="media-body">
+                  <p>{{ someArtic.idea }}</p>
+                </div>
+              </div>
+
+            </div>
+          </ul>
+
+
+        </div>
+        <div class="panel-body">
+          <div>
+            <h2>Add new article</h2>
+            <h4 ng-show="showID" class="text-muted">Id: <code>{{newId}}</code></h4>
+            <div class="form-group">
+              <label for="titleName">Title</label>
+              <input type="text" class="form-control" id="titleName" ng-model="ourTitle" ng-click="autoIndex()"/>
+            </div>
+            <div class="form-group">
+              <label for="ideaName">Idea</label>
+              <textarea rows="5" class="form-control" id="ideaName" ng-model="ourIdea" ng-click="autoIndex()"></textarea>
+            </div>
+            <div>
+
+            </div>
+            <button class="btn btn-primary" ng-click="createArticle()">Create</button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">List of boxes</div>
+      <div class="panel-body" id="sideRight_content">
+
+        <div>
+          <span dnd-list="first.articles.A" class="well thumbnail first_box" ng-class="{'side_content' : scrollA}">
+            <div ng-repeat="someArtic in first.articles.A" dnd-draggable="someArtic" dnd-moved="first.articles.A.splice($index, 1)" dnd-effect-allowed="move" dnd-dragstart="indefMe($index, 'A')" dnd-dragend="shortMe()" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span dnd-list="first.articles.B" class="well thumbnail second_box" ng-class="{'side_content' : scrollB}">
+            <div ng-repeat="someArtic in first.articles.B" dnd-draggable="someArtic" dnd-moved="first.articles.B.splice($index, 1)" dnd-effect-allowed="move" dnd-dragstart="indefMe($index, 'B')" dnd-dragend="shortMe()" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span dnd-list="first.articles.C" class="well thumbnail third_box" ng-class="{'side_content': scrollC}">
+            <div ng-repeat="someArtic in first.articles.C" dnd-draggable="someArtic" dnd-moved="first.articles.C.splice($index, 1)" dnd-effect-allowed="move" dnd-dragstart="indefMe($index, 'C')" dnd-dragend="shortMe()" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span dnd-list="first.articles.D" class="well thumbnail fourth_box" ng-class="{'side_content': scrollD}">
+            <div ng-repeat="someArtic in first.articles.D" dnd-draggable="someArtic" dnd-moved="first.articles.D.splice($index, 1)" dnd-effect-allowed="move" dnd-dragstart="indefMe($index, 'D')" dnd-dragend="shortMe()" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+        <div>
+          <span dnd-list="first.articles.E" class="well thumbnail fifth_box" ng-class="{'side_content': scrollE}">
+            <div ng-repeat="someArtic in first.articles.E" dnd-draggable="someArtic" dnd-moved="first.articles.E.splice($index, 1)" dnd-effect-allowed="move" dnd-dragstart="indefMe($index, 'E')" dnd-dragend="shortMe()" class="btn btn-block btn-primary">
+              {{ someArtic.id + ". " + someArtic.title}}
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-info btn-block" id="align_center"   ng-disabled="abilityPreview" type="button" ui-sref="result">Preview</button>
+</div>
